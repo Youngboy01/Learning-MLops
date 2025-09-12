@@ -13,6 +13,8 @@ class chattingFunctionality:
             3. Write a message to friend
             4. write a post
             5. exit
+            
+            
             """
         )
         if user_input == "1":
@@ -20,9 +22,9 @@ class chattingFunctionality:
         elif user_input == "2":
             self.login()
         elif user_input == "3":
-            pass
+            self.writeMessage()
         elif user_input == "4":
-            pass
+            self.writePost()
         else:
             print("Exiting the application. Goodbye!")
             exit()
@@ -46,6 +48,25 @@ class chattingFunctionality:
                 self.logged_in = True
             else:
                 print("Invalid credentials. Please try again.")
+        print("\n")
+        self.menu()
+
+    def writeMessage(self):
+        if not self.logged_in:
+            print("you need to login first")
+        else:
+            friend = input("Enter your friend's name: ")
+            message = input("Enter your message: ")
+            print(f"Message sent to {friend}: {message}")
+        print("\n")
+        self.menu()
+
+    def writePost(self):
+        if not self.logged_in:
+            print("you need to login first")
+        else:
+            post = input("Write your post here: ")
+            print("Post published:", post)
         print("\n")
         self.menu()
 
