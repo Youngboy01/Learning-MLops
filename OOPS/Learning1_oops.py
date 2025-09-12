@@ -1,9 +1,25 @@
 class chattingFunctionality:
+    __user_id = 0  # static variable
     def __init__(self):
+        self.__name = "Default user"
+        # self.user_id=0
+        # self.user_id+=1
+        self.id = chattingFunctionality.__user_id
+        chattingFunctionality.__user_id += 1
         self.username = ""
         self.password = ""
         self.logged_in = False
-        self.menu()
+        #self.menu()
+    @staticmethod
+    def get_id():
+        return chattingFunctionality.__user_id
+    @staticmethod
+    def set_id(id):
+        chattingFunctionality.__user_id = id
+    def get_name(self):
+        return self.__name
+    def set_name(self,name):
+        self.__name = name
 
     def menu(self):
         user_input = input(
