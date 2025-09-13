@@ -17,8 +17,8 @@
 # # bigcars = Car("Honda", "Civic")
 # # print(bigcars.start_engine())
 
-#Types of inheritance
-#single inheritance
+# Types of inheritance
+# single inheritance
 # class Parent:
 #     def __init__(self,name):
 #         self.name = name
@@ -31,7 +31,7 @@
 # object.func1()
 # object.func2()
 
-#Multi-level inheritance
+# Multi-level inheritance
 # class GrandParent:
 #     def __init__(self,name):
 #         self.name = name
@@ -47,7 +47,7 @@
 # object.func1()
 # object.func2()
 # object.func3()
-#Hierarchical inheritance
+# Hierarchical inheritance
 # class Parent:
 #     def func1(self):
 #         print("Inside parent class.")
@@ -63,7 +63,7 @@
 # object2 = Child2()
 # object2.func1()
 # object2.func3()
-#Multiple inheritance
+# Multiple inheritance
 # class A:
 #     def __init__(self,name):
 #         self.name = name
@@ -84,25 +84,31 @@
 # d = D("YoungBoy")
 # d.greet()
 
-#Hybrid inheritance
+# Hybrid inheritance
 class A:
-    def __init__(self,name):
+    def __init__(self, name):
         self.name = name
+
     def greet(self):
         print(f"Inside class A. Name: {self.name}")
+
+
 class B(A):
     def greet(self):
         print(f"Inside class B. Name: {self.name}")
         super().greet()
+
+
 class C:
     def greet(self):
         print("Inside class C")
-        
-class D(B,C):
+
+
+class D(B, C):
     def greet(self):
         print(f"Inside class D. Name: {self.name}")
         super().greet()
-d = D("YoungBoy")
-d.greet()
 
-        
+
+d = D("youngBoy")
+d.greet()
