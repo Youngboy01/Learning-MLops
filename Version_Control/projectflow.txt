@@ -1,3 +1,7 @@
 1. Create git repo and clone it
 2. create .py file and add code to it
 3. do git add commit push
+4. Now we do "dvc init"
+5. now we do mkdir s3
+6. Now we do "dvc remote add -d mylocal s3"
+7. Now we do "dvc add data_output/"
