@@ -12,6 +12,10 @@ df = pd.DataFrame(data)
 # Display DataFrame
 print("Original DataFrame:\n", df)
 
+df.loc[len(df)] = ["Anjali", 27, "Bangalore"]
+# df.iloc[0,0] = "Amanpreet"
+# df.iloc[1,1] = 30
+print("\nUpdated DataFrame:\n", df)
 # Ensure a directory exists
 output_dir = "data_output"
 if not os.path.exists(output_dir):
